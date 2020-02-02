@@ -17,7 +17,7 @@ $lg2^n<lgn^8$
 
 $2^n<n^8$
 
-等出 n < 44的正整数
+得出 n < 44的正整数
 
 ```
 from sympy import *
