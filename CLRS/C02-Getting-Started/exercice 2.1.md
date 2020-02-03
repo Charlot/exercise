@@ -64,6 +64,7 @@ BINARY_ADD(A, B)
     C = Array[A.length + 1]
     carry = 0
     for i=1 to A.length
+        // 由于元素都非负数，也可以 mod 2 
         C[i] = (A[i] + B[i] + carry) % 2
         carry = (A[i] + B[i] + carry) / 2
     C[i] = carry         
