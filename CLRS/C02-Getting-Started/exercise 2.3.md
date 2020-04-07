@@ -72,8 +72,9 @@ of the recurrence
 T(2^(k+1)) = 2T((2^(k+1))/2)+2^(k+1)
          = 2T(2^k)+2^(k+1)
          = 2*(k*2^k)+2^(k+1)
-         = (k+1)*2^(k+1)
-         = (k+1)lg2^(k+1)
+         = 2^(k+1)*(k+1)
+         = 2^(k+1)*lg2^(k+1)
+         = nlgn
 
 结论： 当n正好是2的幂时，递归式的解是T(n)=nlgn。
 
@@ -114,3 +115,28 @@ BINARY-SEARCH(A, v, l, h)
     else
         return  BINARY-SEARCH(A, v, l, mid - 1)
 ```
+
+2.3-6 注意到2.1节中的过程INSERTION-SORT的第5~7行的while循环采用一种线性查找来（反向）扫描已排好序的子数组A[1..j-1]。我们可以使用二分查找（参见练习2.3一5)来把插人排序的最坏情况总运行时间改进到Θ(nlgn）吗？
+
+>伪代码
+```
+BINARY-INSERTION-SORT(A)
+    for j in 2 to A.length
+        m = A[j]
+        // 找到位置
+        i = BINARY-SEARCH(A, m, 1, A.length - 1)
+        // 移动数值
+        for k in j to i:
+            tmp = A[k]
+            A[k] = A[k-1] 
+            A[k-1] = tmp
+        A[i] = m
+```
+
+> 是否可以改进
+```
+不可以。
+查找的时间减低，但是第一个循环和交换数据的循环执行总时间最坏为：Θ(n^2)
+```
+
+2.2-7 描述一个运行时间为0(nlgn）的算法，给定n个整数的集合S和另一个整数x，该算法能确定S中是否存在两个其和刚好为x的元素。
