@@ -172,9 +172,10 @@ d. 在实践中，我们应该如何选择k?
 
 > c
 
-nk+nlg(n/k) = nlgn
-
-k = 
+nk+nlg(n/k) = nk+nlgn-nlgk = nlgn+n(k-lgk)
+= nlgn + nlg(2^k/k)
+当(2^k)/k < 2 时，lg(2^k/k) 为负数
+## ongoing....
 
 
 
