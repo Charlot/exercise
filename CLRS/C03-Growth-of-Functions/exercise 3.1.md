@@ -77,7 +77,10 @@ O代表的是运行时间上界，“至少”代表的是下界。
 
 > 解答
 
-这里的小o(little-oh of g of n)，小w(little-omega of g of n) 代表非渐近紧确(not asymptotically tight)
+这里的小o(little-oh of g of n)，小w(little-omega of g of n) 代表非渐近紧确(not asymptotically tight).
 
+这个证明主要关注点是o和w的定义中，对常量c是任意>0值。
 
+![not_asymptotically_tight](../attach/clrs-e-3-1-7.png)
 
+**3.1-8** 【问题较简单，不做练习】 
