@@ -18,7 +18,7 @@ class Pub:
             print(msg)
             if msg==3:
                 break
-            
+            self.pub_event.clear()
 
 
 
