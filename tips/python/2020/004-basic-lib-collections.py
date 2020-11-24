@@ -39,3 +39,7 @@ for k,v in s:
     
 print(dict(d))    
 
+from queue import Queue
+q = Queue()
+q.put(1)
+print(q)
