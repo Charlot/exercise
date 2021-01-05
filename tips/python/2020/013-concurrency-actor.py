@@ -1,3 +1,5 @@
+# https://python3-cookbook.readthedocs.io/zh_CN/latest/c12/p10_defining_an_actor_task.html
+
 from queue import Queue
 import threading
 from threading import Event
