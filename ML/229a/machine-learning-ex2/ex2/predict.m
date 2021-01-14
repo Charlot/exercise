@@ -15,11 +15,14 @@ p = zeros(m, 1);
 %               You should set p to a vector of 0's and 1's
 %
 
+%% fun1
+h = sigmoid(X*theta);
+p = h>=0.5;
+%%
 
-
-
-
-
+%% fun2??
+% p1=X*theta>0;
+%%
 
 % =========================================================================
 
