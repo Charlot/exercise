@@ -57,8 +57,10 @@ fprintf('\nTesting lrCostFunction() with regularization');
 
 theta_t = [-2; -1; 1; 2];
 X_t = [ones(5,1) reshape(1:15,5,3)/10];
+size(X_t)
 y_t = ([1;0;1;0;1] >= 0.5);
 lambda_t = 3;
+
 [J grad] = lrCostFunction(theta_t, X_t, y_t, lambda_t);
 
 fprintf('\nCost: %f\n', J);
@@ -72,10 +74,8 @@ fprintf('Program paused. Press enter to continue.\n');
 pause;
 %% ============ Part 2b: One-vs-All Training ============
 fprintf('\nTraining One-vs-All Logistic Regression...\n')
-
 lambda = 0.1;
 [all_theta] = oneVsAll(X, y, num_labels, lambda);
-
 fprintf('Program paused. Press enter to continue.\n');
 pause;
 

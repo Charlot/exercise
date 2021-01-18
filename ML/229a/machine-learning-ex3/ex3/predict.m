@@ -22,7 +22,14 @@ p = zeros(size(X, 1), 1);
 %
 
 
+X=[ones(m,1) X];
+h1 = sigmoid(X*Theta1');
+a2 = [ones(m,1) h1];
+h2 = sigmoid(a2*Theta2');
 
+[val,val_index]=max(h2,[],2);
+
+p=val_index;
 
 
 
